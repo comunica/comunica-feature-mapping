@@ -1,0 +1,11 @@
+{
+  "source": "lib",
+  "ignorePackagePaths": [
+    "engines/query-sparql-mapping"
+  ],
+  "ignoreComponents": [
+    "Headers",
+    "RDF.Stream"
+  ],
+  "modulePrefix": {}
+}

@@ -1,0 +1,8 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/config-query-sparql-mapping/^0.0.0/components/context.jsonld"
+  ],
+  "import": [
+    "ccqsm:config/config-default.json"
+  ]
+}

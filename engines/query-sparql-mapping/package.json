@@ -1,0 +1,58 @@
+{
+  "name": "@comunica/query-sparql-mapping",
+  "version": "0.0.1",
+  "description": "A Comunica engine for mapping-based query evaluation",
+  "lsd:module": true,
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "repository": "https://github.com/comunica/comunica-feature-mapping/tree/master/packages/query-sparql-mapping",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "comunica",
+    "sparql",
+    "engine",
+    "query",
+    "update",
+    "sparql engine",
+    "sparql query",
+    "sparql update",
+    "sparql 1.1",
+    "mapping"
+  ],
+  "license": "MIT",
+  "bin": {
+    "comunica-sparql-mapping": "bin/query.js",
+    "comunica-sparql-mapping-http": "bin/http.js",
+    "comunica-dynamic-sparql-mapping": "bin/query-dynamic.js"
+  },
+  "bugs": {
+    "url": "https://github.com/comunica/comunica/issues"
+  },
+  "homepage": "https://comunica.dev/",
+  "files": [
+    "components",
+    "config",
+    "bin/**/*.d.ts",
+    "bin/**/*.js",
+    "lib/**/*.d.ts",
+    "lib/**/*.js",
+    "engine-default.js"
+  ],
+  "dependencies": {
+    "@comunica/query-sparql": "^2.2.1",
+    "@comunica/config-query-sparql-mapping": "^0.0.1",
+    "@comunica/actor-init-query": "^2.2.0",
+    "@comunica/runner-cli": "^2.2.0"
+  },
+  "scripts": {
+    "build": "npm run build:ts",
+    "build:ts": "node \"../../node_modules/typescript/bin/tsc\"",
+    "prepare": "comunica-compile-config config/config-default.json > engine-default.js"
+  },
+  "browser": {
+    "./lib/index.js": "./lib/index-browser.js"
+  }
+}
